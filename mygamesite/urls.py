@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+import industries.views
 
 urlpatterns = [
+    path('', industries.views.home),
     path('industries/', include('industries.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('add_industry', industries.views.add_industry),
+    path('add_franchise', industries.views.add_franchise),
+    path('add_game', industries.views.add_game),
+    path('get_industries', industries.views.get_industries, name='get_industries'),
+    path('get_franchises', industries.views.get_franchises, name='get_franchises'),
+    path('get_games/', industries.views.get_games, name='get_games'),
+    path('404', industries.views.getNotFound),
+
 ]

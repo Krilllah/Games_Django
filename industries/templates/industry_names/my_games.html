@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Industries</title>
+    <title>Games</title>
 </head>
 <body>
 <ol>
-    {% for i in industries %}
+    {% for i in games %}
     <ol>
         <li>{{ i.name }}</li>
-        <li>{{ i.owner }}</li>
-        <li>{{ i.foundation_date }}</li>
+        <li>{{ i.franchise }}</li>
     </ol>
     <br>
     {% endfor %}
 </ol>
 <br>
 <br>
-<a href="/add_industry">Add a new Game Industry</a>
+<a href="/add_game">Add a new Game</a>
 </body>
 </html>
