@@ -63,5 +63,9 @@ def add_game(request):
     return render(request, 'industry_names/game.html', {'form': form})
 
 
+def delete_game(request):
+    pass
+
+
 def getNotFound(request):
     return HttpResponse(render_to_string('industry_names/404.html'))

@@ -7,10 +7,16 @@
 <body>
 <ol>
     {% for i in games %}
-    <ol>
-        <li>{{ i.name }}</li>
-        <li>{{ i.franchise }}</li>
-    </ol>
+    <li>
+        <p>{{ i.name }} - {{ i.description }},
+            <br>
+            выпущенная {{ i.release_date }} и
+            <br>
+            входящая в серию игр {{ i.franchise }}
+            <br>
+            Цена: {{ i.price }}Р
+        </p>
+    </li>
     <br>
     {% endfor %}
 </ol>

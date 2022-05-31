@@ -20,4 +20,7 @@ class Franchise(models.Model):
 
 class Game(models.Model):
     name = models.CharField(max_length=50)
+    description = models.CharField(max_length=100)
+    release_date = models.DateField()
+    price = models.IntegerField()
     franchise = models.ForeignKey(Franchise, on_delete=models.CASCADE)
